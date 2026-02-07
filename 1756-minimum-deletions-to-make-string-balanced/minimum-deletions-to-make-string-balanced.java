@@ -3,8 +3,8 @@ class Solution {
         int d = 0;
         int countB = 0;
 
-        for (char c : s.toCharArray()) {
-            if (c == 'b') {
+        for (int c=0;c<s.length();c++) {
+            if (s.charAt(c) == 'b') {
                 countB++;
             } else {
                 d = Math.min(d + 1, countB);
