@@ -2,6 +2,8 @@ class Solution:
     def longestBalanced(self, s: str) -> int:
         res = 0
         for left in range(len(s)):
+            if len(s) - left <= res:
+                break
             count = defaultdict(int)
             for right in range(left, len(s)):
                 count[s[right]] += 1
