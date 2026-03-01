@@ -1,5 +1,4 @@
-class Solution:
-    def minPartitions(self, n: str) -> int:
-        X = max(int(d) for d in n)
-        return X
+class Solution(object):
+    def minPartitions(self, n):
+        return max(int(d) for d in n)
         
