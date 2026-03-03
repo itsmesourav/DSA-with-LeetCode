@@ -1,8 +1,15 @@
-class Solution:
-    def findKthBit(self, n: int, k: int) -> str:
-         return "0" if n == 1 else (
-            "1" if k == 1 << (n - 1) else
-            self.findKthBit(n - 1, k) if k < 1 << (n - 1) else
-            str(1 - int(self.findKthBit(n - 1, (1 << n) - k)))
-        )
+class Solution(object):
+    def findKthBit(self, n, k):
+        if n == 1:
+            return "0"
+        
+        mid = 1 << (n - 1)
+        
+        if k == mid:
+            return "1"
+        if k < mid:
+            return self.findKthBit(n - 1, k)
+        
+        return "1" if self.findKthBit(n - 1, 2 * mid - k) == "0" else "0"
+        
         
