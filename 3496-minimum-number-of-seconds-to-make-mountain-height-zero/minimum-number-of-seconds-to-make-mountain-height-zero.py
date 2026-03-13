@@ -1,5 +1,5 @@
-class Solution:
-    def minNumberOfSeconds(self, mountainHeight: int, workerTimes: List[int]) -> int:
+class Solution(object):
+    def minNumberOfSeconds(self, mountainHeight, workerTimes):
         h = []
 
         for x in workerTimes:
@@ -11,4 +11,4 @@ class Solution:
             heapq.heappush(h, (acc + base * count, base, count + 1))
 
         return res
-        
+      
