@@ -1,5 +1,5 @@
-class Solution:
-    def largestSubmatrix(self, matrix: List[List[int]]) -> int:
+class Solution(object):
+    def largestSubmatrix(self, matrix):
         n = len(matrix)
         m = len(matrix[0])
         acc = [0] * m
@@ -17,5 +17,3 @@ class Solution:
                 res = max(res, s[ci] * (ci + 1))
         
         return res
-
-        
