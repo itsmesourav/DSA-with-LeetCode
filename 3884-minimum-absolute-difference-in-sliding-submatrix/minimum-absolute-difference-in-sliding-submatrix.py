@@ -1,5 +1,5 @@
-class Solution:
-    def minAbsDiff(self, grid: List[List[int]], k: int) -> List[List[int]]:
+class Solution(object):
+    def minAbsDiff(self, grid, k):
         n = len(grid)
         m = len(grid[0])
         res = [[0] * (m - k + 1) for _ in range(n - k + 1)] 
@@ -15,7 +15,7 @@ class Solution:
                     if len(curr) == 1:
                         res[i][j] = 0
                     else:
-                        mn = inf
+                        mn = float('inf')
                         s = sorted(curr)
                         for ii, v in enumerate(s):
                             if ii == 0:
