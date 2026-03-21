@@ -1,16 +1,42 @@
-class Solution:
-    def romanToInt(self, s: str) -> int:
-        roman = {
-            'I': 1, 'V': 5, 'X': 10,
-            'L': 50, 'C': 100, 'D': 500,
-            'M': 1000
-        }
+class Solution(object):
+    def romanToInt(self, s):
         total = 0
-
         for i in range(len(s)):
-            if i + 1 < len(s) and roman[s[i]] < roman[s[i + 1]]:
-                total -= roman[s[i]]
+            if s[i] == "I":
+                value = 1
+            elif s[i] == "V":
+                value = 5
+            elif s[i] == "X":
+                value = 10
+            elif s[i] == "L":
+                value = 50
+            elif s[i] == "C":
+                value = 100
+            elif s[i] == "D":
+                value = 500
             else:
-                total += roman[s[i]]
+                value = 1000
+
+            if i + 1 < len(s):
+                if s[i+1] == "I":
+                    next_val = 1
+                elif s[i+1] == "V":
+                    next_val = 5
+                elif s[i+1] == "X":
+                    next_val = 10
+                elif s[i+1] =="L":
+                    next_val = 50
+                elif s[i+1] == "C":
+                    next_val = 100
+                elif s[i+1] == "D":
+                    next_val = 500
+                else:
+                    next_val = 1000
+
+                if value < next_val:
+                    total -= value
+                else:
+                    total += value
+            else:
+                total += value
         return total
-        
