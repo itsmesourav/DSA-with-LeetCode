@@ -1,5 +1,5 @@
-class Solution:
-    def maxProductPath(self, grid: List[List[int]]) -> int:
+class Solution(object):
+    def maxProductPath(self, grid):
         MOD = 10**9 + 7
         n = len(grid)
         m = len(grid[0])
@@ -27,3 +27,4 @@ class Solution:
                     mx[i][j] = max(a, b, c, d)
         res = mx[-1][-1]
         return res % MOD if res >= 0 else -1
+        
