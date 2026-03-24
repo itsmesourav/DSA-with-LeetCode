@@ -1,28 +1,25 @@
-class Solution:
-    def constructProductMatrix(self, grid: List[List[int]]) -> List[List[int]]:
+class Solution(object):
+    def constructProductMatrix(self, grid):
         MOD = 12345
         n = len(grid)
         m = len(grid[0])
+        pre = [[1] * m for _ in range(n)]
+        suf = [[1] * m for _ in range(n)]
 
-        flat = []
+        p = 1
         for i in range(n):
             for j in range(m):
-                flat.append(grid[i][j])
+                pre[i][j] = p
+                p = (p * grid[i][j]) % MOD
 
-        f = len(flat)
-        p = [1] * f
-        s = [1] * f
+        s = 1
+        for i in range(n - 1, -1, -1):
+            for j in range(m -1, -1, -1):
+                suf[i][j] = s
+                s = (s * grid[i][j]) % MOD
 
-        for i in range(1, f):
-            p[i] = (p[i - 1] * flat[i - 1]) % MOD
-
-        for i in range(f - 2, -1, -1):
-            s[i] = (s[i + 1] * flat[i + 1]) % MOD
-
-        res = [[1] * m for _ in range(n)]
         for i in range(n):
             for j in range(m):
-                res[i][j] = (p[i*m + j] * s[i*m + j]) % MOD
-                
-        return res
-        
+                pre[i][j] = (pre[i][j] * suf[i][j]) % MOD
+    
+        return pre
