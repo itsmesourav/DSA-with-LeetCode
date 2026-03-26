@@ -1,5 +1,5 @@
-class Solution:
-    def canPartitionGrid(self, grid: List[List[int]]) -> bool:
+class Solution(object):
+    def canPartitionGrid(self, grid):
         def check(g):
             nn = len(g)
             mm = len(g[0])
@@ -34,17 +34,10 @@ class Solution:
         total = sum(grid[i][j] for j in range(m) for i in range(n))
         if check(grid) or check(grid[::-1]): 
             return True
-    
-        # trnaspose grid
-        # ng = []
-        # for j in range(m):
-        #     nr = []
-        #     for i in range(n):
-        #          nr.append(grid[i][j])
-        #     ng.append(nr)
 
         grid = list(zip(*grid))
 
         if check(grid) or check(grid[::-1]):
             return True
         return False
+        
