@@ -1,5 +1,5 @@
-class Solution(object):
-    def robotSim(self, commands, obstacles):
+class Solution:
+    def robotSim(self, commands: List[int], obstacles: List[List[int]]) -> int:
         dirs = [(0, 1), (1, 0), (0, -1), (-1, 0)]
         d = 0
         x, y = 0, 0
@@ -19,5 +19,4 @@ class Solution(object):
                         break
                     res = max(res, nx**2 + ny**2)
                     x, y = nx, ny
-        return res
-        
+        return res    
