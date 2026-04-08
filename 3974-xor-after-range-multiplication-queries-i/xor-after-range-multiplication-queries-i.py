@@ -1,5 +1,5 @@
-class Solution:
-    def xorAfterQueries(self, nums: List[int], queries: List[List[int]]) -> int:
+class Solution(object):
+    def xorAfterQueries(self, nums, queries):
         for l, r, k, v in queries:
             idx = l
             while idx <= r:
@@ -9,3 +9,4 @@ class Solution:
         for x in nums:
             res ^= x
         return res
+        
