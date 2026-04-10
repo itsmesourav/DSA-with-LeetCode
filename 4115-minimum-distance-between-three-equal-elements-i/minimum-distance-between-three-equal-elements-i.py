@@ -1,12 +1,22 @@
-class Solution:
-    def minimumDistance(self, nums: List[int]) -> int:
-        n = len(nums)
-        res = inf
-
-        for i in range(n):
-            for j  in range(i + 1, n):
-                for k in range(j + 1, n):
-                    if nums[i] == nums[j] and nums[j] == nums[k]:
-                        res = min(res, abs(i - j) + abs(j - k) + abs(i - k))
-
-        return res if res != inf else -1  
+class Solution(object):
+    def minimumDistance(self, nums):
+        from collections import defaultdict
+        
+        pos = defaultdict(list)
+        
+        # Store indices
+        for i, num in enumerate(nums):
+            pos[num].append(i)
+        
+        ans = float('inf')
+        
+        # Check each number
+        for indices in pos.values():
+            if len(indices) >= 3:
+                # sliding window of size 3
+                for i in range(len(indices) - 2):
+                    dist = 2 * (indices[i+2] - indices[i])
+                    ans = min(ans, dist)
+        
+        return ans if ans != float('inf') else -1
+        
