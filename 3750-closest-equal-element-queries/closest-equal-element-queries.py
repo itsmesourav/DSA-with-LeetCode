@@ -1,5 +1,5 @@
-class Solution:
-    def solveQueries(self, nums: List[int], queries: List[int]) -> List[int]:
+class Solution(object):
+    def solveQueries(self, nums, queries):
         n = len(nums)
         mp = defaultdict(list)
         for i in range(n):
@@ -20,7 +20,7 @@ class Solution:
                 prev = arr[(i - 1) % s]
                 next = arr[(i + 1) % s]
 
-                curr = inf
+                curr = 'inf'
                 d1 = abs(prev - arr[i])
                 curr = min(curr, d1, n - d1)
                 d2 =  abs(next - arr[i])
