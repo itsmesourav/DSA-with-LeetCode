@@ -1,4 +1,8 @@
-class Solution:
-    def mirrorDistance(self, n: int) -> int:
-        r =str(n)[::-1]
-        return abs(n - int(r))
+class Solution(object):
+    def mirrorDistance(self, n):
+        num = n
+        r = 0
+        while n:
+            r = r * 10 + (n % 10)
+            n //= 10
+        return abs(num - r)
