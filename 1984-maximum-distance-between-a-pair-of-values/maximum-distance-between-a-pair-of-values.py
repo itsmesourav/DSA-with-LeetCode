@@ -1,5 +1,7 @@
-class Solution(object):
-    def maxDistance(self, nums1, nums2):
+from typing import List
+
+class Solution:
+    def maxDistance(self, nums1: List[int], nums2: List[int]) -> int:
         i = 0
         j = 0
         max_dist = 0
