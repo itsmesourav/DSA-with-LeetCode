@@ -1,21 +1,16 @@
-from typing import List
-
-class Solution:
-    def twoEditWords(self, queries: List[str], dictionary: List[str]) -> List[str]:
+class Solution(object):
+    def twoEditWords(self, queries, dictionary):
+        n = len(queries[0])
         res = []
-        
-        for q in queries:
-            for d in dictionary:
-                diff = 0
+
+        for query in queries:
+            for word in dictionary:
+                edits = 0
+                for i in range(n):
+                    if query[i] != word[i]:
+                        edits += 1
                 
-                for i in range(len(q)):
-                    if q[i] != d[i]:
-                        diff += 1
-                        if diff > 2:
-                            break
-                
-                if diff <= 2:
-                    res.append(q)
+                if edits <= 2:
+                    res.append(query)
                     break
-        
         return res
