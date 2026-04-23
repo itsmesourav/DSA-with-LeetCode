@@ -1,5 +1,5 @@
-class Solution:
-    def distance(self, nums: List[int]) -> List[int]:
+class Solution(object):
+    def distance(self, nums):
         n = len(nums)
         mp = {}
         pre = [0] * n
@@ -30,3 +30,4 @@ class Solution:
         for i in range(n):
             res[i] = pre[i] + suf[i]
         return res
+        
