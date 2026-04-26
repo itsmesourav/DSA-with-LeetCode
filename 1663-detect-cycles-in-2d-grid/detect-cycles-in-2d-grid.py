@@ -1,5 +1,5 @@
-class Solution:
-    def containsCycle(self, grid: List[List[str]]) -> bool:
+class Solution(object):
+    def containsCycle(self, grid):
         n = len(grid)
         m = len(grid[0])
 
@@ -26,3 +26,4 @@ class Solution:
                         return True
         
         return False
+        
