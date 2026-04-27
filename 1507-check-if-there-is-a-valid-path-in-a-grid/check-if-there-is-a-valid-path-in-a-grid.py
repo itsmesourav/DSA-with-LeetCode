@@ -1,5 +1,5 @@
-class Solution(object):
-    def hasValidPath(self, grid):
+class Solution:
+    def hasValidPath(self, grid: List[List[int]]) -> bool:
         dirs = {
             1: [(0, 1), (0, -1)],
             2: [(-1, 0), (1, 0)],
@@ -35,4 +35,3 @@ class Solution(object):
         m = len(grid[0])
         seen = {(0, 0)}
         return dfs(0, 0)
-        
