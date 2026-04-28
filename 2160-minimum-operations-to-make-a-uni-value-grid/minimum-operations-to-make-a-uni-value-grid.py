@@ -1,5 +1,5 @@
-class Solution(object):
-    def minOperations(self, grid, x):
+class Solution:
+    def minOperations(self, grid: List[List[int]], x: int) -> int:
         n = len(grid)
         m = len(grid[0])
         arr = []
