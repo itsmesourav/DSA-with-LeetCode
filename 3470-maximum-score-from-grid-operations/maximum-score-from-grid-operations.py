@@ -1,5 +1,5 @@
-class Solution:
-    def maximumScore(self, grid: List[List[int]]) -> int:
+class Solution(object):
+    def maximumScore(self, grid):
         n = len(grid)
         if n == 1:
             return 0
