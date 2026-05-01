@@ -1,5 +1,5 @@
-class Solution(object):
-    def maxRotateFunction(self, nums):
+class Solution:
+    def maxRotateFunction(self, nums: List[int]) -> int:
         n = len(nums)
         prev = 0
         total = sum(nums)
@@ -13,4 +13,3 @@ class Solution(object):
             res =  max(res, prev)
         
         return res
-        
