@@ -1,5 +1,5 @@
-class Solution:
-    def rotatedDigits(self, n: int) -> int:
+class Solution(object):
+    def rotatedDigits(self, n):
         rot = {
             '0' : '0',
             '1' : '1',
@@ -21,3 +21,4 @@ class Solution:
             if len(ns) == len(s) and ns != s:
                 res += 1
         return res
+        
