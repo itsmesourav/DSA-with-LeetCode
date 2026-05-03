@@ -1,5 +1,5 @@
-class Solution(object):
-    def rotateString(self, s, goal):
+class Solution:
+    def rotateString(self, s: str, goal: str) -> bool:
         n = len(s)
 
         for i in range(n):
@@ -7,4 +7,3 @@ class Solution(object):
                 return True
             s = s[1:] + s[0]
         return False
-        
