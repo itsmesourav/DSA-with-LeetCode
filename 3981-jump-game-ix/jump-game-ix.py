@@ -1,5 +1,5 @@
-class Solution:
-    def maxValue(self, nums: List[int]) -> List[int]:
+class Solution(object):
+    def maxValue(self, nums):
         n = len(nums)
         res = [0] * n
         s = []
