@@ -1,5 +1,5 @@
-class Solution:
-    def minMoves(self, nums: List[int], limit: int) -> int:
+class Solution(object):
+    def minMoves(self, nums, limit):
         n = len(nums)
         dif = [0] * (2 * limit + 2)
 
@@ -18,3 +18,4 @@ class Solution:
             res = min(res, curr)
         
         return res
+        
