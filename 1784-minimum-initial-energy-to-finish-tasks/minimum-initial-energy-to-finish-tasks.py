@@ -1,5 +1,5 @@
-class Solution:
-    def minimumEffort(self, tasks: List[List[int]]) -> int:
+class Solution(object):
+    def minimumEffort(self, tasks):
         tasks.sort(key = lambda x: x[1] - x[0], reverse = True)
         res = 0
         avail = 0
@@ -11,3 +11,4 @@ class Solution:
                 avail += need
             avail -= c
         return res
+        
