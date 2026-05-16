@@ -1,5 +1,5 @@
-class Solution:
-    def findMin(self, nums: List[int]) -> int:
+class Solution(object):
+    def findMin(self, nums):
         l = 0
         h = len(nums) - 1
 
@@ -13,4 +13,3 @@ class Solution:
                 h -= 1
 
         return nums[h]
-        
