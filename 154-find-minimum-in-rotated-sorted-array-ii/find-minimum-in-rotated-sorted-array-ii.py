@@ -12,4 +12,4 @@ class Solution(object):
             else:
                 h -= 1
 
-        return nums[h]
+        return nums[l]
