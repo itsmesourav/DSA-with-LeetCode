@@ -11,6 +11,6 @@ class Solution:
                 h = mid
             else:
                 h -= 1
-                
-        return nums[l]
+
+        return nums[h]
         
