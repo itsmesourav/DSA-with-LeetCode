@@ -1,5 +1,10 @@
-class Solution:
-    def canReach(self, arr: List[int], start: int) -> bool:
+class Solution(object):
+    def canReach(self, arr, start):
+        """
+        :type arr: List[int]
+        :type start: int
+        :rtype: bool
+        """
         def dfs(i):
             if i < 0 or i >= n or i in seen:
                 return False
@@ -11,3 +16,4 @@ class Solution:
         seen = set()
         n = len(arr)
         return dfs(start)
+        
