@@ -7,7 +7,6 @@ class Solution(object):
         if n == 1:
             return 0
 
-        # value -> list of indices
         graph = defaultdict(list)
 
         for i, val in enumerate(arr):
@@ -21,16 +20,11 @@ class Solution(object):
             for _ in range(len(q)):
                 i = q.popleft()
 
-                # reached last index
                 if i == n - 1:
                     return steps
 
-                neighbors = []
+                neighbors = graph[arr[i]]
 
-                # same value jumps
-                neighbors.extend(graph[arr[i]])
-
-                # adjacent jumps
                 if i + 1 < n:
                     neighbors.append(i + 1)
 
@@ -42,9 +36,8 @@ class Solution(object):
                         visited.add(nei)
                         q.append(nei)
 
-                # IMPORTANT:
-                # avoid re-processing same value indices
-                graph[arr[i]].clear()
+                # prevent repeated processing
+                graph[arr[i]] = []
 
             steps += 1
 
