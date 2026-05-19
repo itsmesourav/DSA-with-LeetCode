@@ -1,6 +1,6 @@
-class Solution(object):
-    def getCommon(self, nums1, nums2):
-        res = 'inf'
+class Solution:
+    def getCommon(self, nums1: List[int], nums2: List[int]) -> int:
+        res = inf
 
         nums1 = set(nums1)
         nums2 = set(nums2)
@@ -9,4 +9,4 @@ class Solution(object):
             if x in nums2:
                 res = min(res, x)
 
-        return res if res != 'inf' else -1        
+        return res if res != inf else -1
