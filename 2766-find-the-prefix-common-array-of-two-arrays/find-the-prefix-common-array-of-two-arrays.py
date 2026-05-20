@@ -1,5 +1,5 @@
-class Solution:
-    def findThePrefixCommonArray(self, A: List[int], B: List[int]) -> List[int]:
+class Solution(object):
+    def findThePrefixCommonArray(self, A, B):
         n = len(A)
         sa = set()
         sb = set()
