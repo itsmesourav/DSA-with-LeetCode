@@ -1,5 +1,5 @@
-class Solution(object):
-    def check(self, nums):
+class Solution:
+    def check(self, nums: List[int]) -> bool:
         n = len(nums)
         if n == 1:
             return True
