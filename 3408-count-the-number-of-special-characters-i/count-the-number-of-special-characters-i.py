@@ -1,5 +1,9 @@
-class Solution:
-    def numberOfSpecialChars(self, word: str) -> int:
+class Solution(object):
+    def numberOfSpecialChars(self, word):
+        """
+        :type word: str
+        :rtype: int
+        """
         res = 0
         seen = set()
 
