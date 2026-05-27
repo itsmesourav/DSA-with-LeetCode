@@ -1,5 +1,5 @@
-class Solution(object):
-    def numberOfSpecialChars(self, word):
+class Solution:
+    def numberOfSpecialChars(self, word: str) -> int:
         n = len(word)
         lastlower = {}
         firstupper = {}
@@ -13,10 +13,6 @@ class Solution(object):
         res = 0
         for i in range(26):
             c = chr(i + ord('a'))
-            if (
-                c in lastlower and
-                c.upper() in firstupper and
-                lastlower[c] < firstupper[c.upper()]
-            ):
+            if (c in lastlower and c.upper() in firstupper and lastlower[c] < firstupper[c.upper()]):
                 res += 1
         return res
