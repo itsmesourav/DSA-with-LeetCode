@@ -1,5 +1,5 @@
-class Solution(object):
-    def minimumCost(self, cost):
+class Solution:
+    def minimumCost(self, cost: List[int]) -> int:
         n = len(cost)
         cost.sort()
         res = 0
