@@ -1,5 +1,5 @@
-class Solution(object):
-    def totalWaviness(self, num1, num2):
+class Solution:
+    def totalWaviness(self, num1: int, num2: int) -> int:
         res = 0
 
         for n in range(num1, num2 + 1):
@@ -9,4 +9,3 @@ class Solution(object):
                     res += 1
         
         return res
-        
