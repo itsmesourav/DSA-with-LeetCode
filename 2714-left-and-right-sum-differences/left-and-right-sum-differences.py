@@ -1,5 +1,5 @@
-class Solution(object):
-    def leftRightDifference(self, nums):
+class Solution:
+    def leftRightDifference(self, nums: List[int]) -> List[int]:
         n =  len(nums)
         res = []
         left = 0
@@ -12,4 +12,3 @@ class Solution(object):
             res.append(abs(left - right))
 
         return res
-        
