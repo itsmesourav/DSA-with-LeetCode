@@ -1,15 +1,15 @@
-class Solution(object):
-    def pivotArray(self, nums, pivot):
+class Solution:
+    def pivotArray(self, nums: List[int], pivot: int) -> List[int]:
         before = []
-        mid = []
+        middle = []
         after = []
 
         for n in nums:
-            if n < pivot:
-                before.append(n)
-            elif n > pivot:
+            if n > pivot:
                 after.append(n)
+            elif n < pivot:
+                before.append(n)
             else:
-                mid.append(n)
+                middle.append(n)
         
-        return before + mid + after
+        return before + middle + after
