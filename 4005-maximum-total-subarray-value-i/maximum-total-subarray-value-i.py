@@ -1,6 +1,6 @@
-class Solution:
-    def maxTotalValue(self, nums: List[int], k: int) -> int:
-        mx, mn = -inf, inf
+class Solution(object):
+    def maxTotalValue(self, nums, k):
+        mx, mn = float('-inf'), float('inf')
 
         for n in nums:
             mx = max(mx, n)
