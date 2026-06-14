@@ -1,5 +1,5 @@
-class Solution:
-    def climbStairs(self, n: int) -> int:
+class Solution(object):
+    def climbStairs(self, n):
         if n <= 2:
             return n
 
@@ -9,3 +9,4 @@ class Solution:
             a, b = b, a + b
 
         return b
+        
