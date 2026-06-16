@@ -1,5 +1,5 @@
-class Solution:
-    def processStr(self, s: str) -> str:
+class Solution(object):
+    def processStr(self, s):
         arr = []
 
         for c in s:
@@ -13,3 +13,4 @@ class Solution:
                 arr = arr[::-1]
         
         return "".join(arr)
+        
