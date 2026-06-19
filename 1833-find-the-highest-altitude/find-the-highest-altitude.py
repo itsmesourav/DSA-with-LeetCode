@@ -1,5 +1,5 @@
-class Solution:
-    def largestAltitude(self, gain: List[int]) -> int:
+class Solution(object):
+    def largestAltitude(self, gain):
         res = 0
         acc = 0
 
@@ -8,3 +8,4 @@ class Solution:
             res = max(res, acc)
 
         return res
+        
