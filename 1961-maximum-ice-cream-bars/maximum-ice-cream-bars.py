@@ -1,5 +1,5 @@
-class Solution:
-    def maxIceCream(self, costs: List[int], coins: int) -> int:
+class Solution(object):
+    def maxIceCream(self, costs, coins):
         costs.sort()
 
         i = 0
