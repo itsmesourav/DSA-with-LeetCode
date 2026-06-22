@@ -1,5 +1,5 @@
-class Solution:
-    def maxNumberOfBalloons(self, text: str) -> int:
+class Solution(object):
+    def maxNumberOfBalloons(self, text):
         fm = defaultdict(int)
 
         for c in text:
