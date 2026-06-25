@@ -1,5 +1,5 @@
-class Solution:
-    def countMajoritySubarrays(self, nums: List[int], target: int) -> int:
+class Solution(object):
+    def countMajoritySubarrays(self, nums, target):
         n = len(nums)
         res = 0
 
@@ -12,4 +12,3 @@ class Solution:
                     res += 1
         
         return res
-
