@@ -1,5 +1,9 @@
-class Solution:
-    def maximumElementAfterDecrementingAndRearranging(self, arr: List[int]) -> int:
+class Solution(object):
+    def maximumElementAfterDecrementingAndRearranging(self, arr):
+        """
+        :type arr: List[int]
+        :rtype: int
+        """
         arr.sort()
         n = len(arr)
         if arr[0] != 1:
