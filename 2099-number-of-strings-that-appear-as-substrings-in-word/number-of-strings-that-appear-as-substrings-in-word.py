@@ -1,5 +1,10 @@
-class Solution:
-    def numOfStrings(self, patterns: List[str], word: str) -> int:
+class Solution(object):
+    def numOfStrings(self, patterns, word):
+        """
+        :type patterns: List[str]
+        :type word: str
+        :rtype: int
+        """
         res = 0
 
         for p in patterns:
