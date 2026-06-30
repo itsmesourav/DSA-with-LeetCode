@@ -1,5 +1,9 @@
-class Solution:
-    def numberOfSubstrings(self, s: str) -> int:
+class Solution(object):
+    def numberOfSubstrings(self, s):
+        """
+        :type s: str
+        :rtype: int
+        """
         n = len(s)
         fm = defaultdict(int)
         res = 0
