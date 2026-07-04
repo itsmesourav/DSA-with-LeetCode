@@ -1,5 +1,10 @@
-class Solution:
-    def minScore(self, n: int, roads: List[List[int]]) -> int:
+class Solution(object):
+    def minScore(self, n, roads):
+        """
+        :type n: int
+        :type roads: List[List[int]]
+        :rtype: int
+        """
         adj = defaultdict(list)
         for a, b, w in roads:
             adj[a].append((b, w))
@@ -7,7 +12,7 @@ class Solution:
 
         q = deque([1])
         seen = set({1})
-        res = inf
+        res = 'inf'
 
         while q:
             node = q.popleft()
