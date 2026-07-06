@@ -2,6 +2,9 @@ class Solution:
     def removeCoveredIntervals(self, intervals: List[List[int]]) -> int:
         n = len(intervals)
 
+        #intervals.sort(key = lambda x: x[1])
+        #intervals.sort(key = lambda x: x[0],  reverse = True)
+
         intervals.sort(key = lambda x: 
         (-x[0], x[1]))
         res = [intervals[0]]
