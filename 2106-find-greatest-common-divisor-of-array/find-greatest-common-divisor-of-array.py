@@ -1,4 +1,5 @@
-from fractions import gcd
-class Solution(object):
-    def findGCD(self, nums):
-        return gcd(min(nums), max(nums))
+class Solution:
+    def findGCD(self, nums: List[int]) -> int:
+        mn = min(nums)
+        mx = max(nums)
+        return gcd(mn, mx)
