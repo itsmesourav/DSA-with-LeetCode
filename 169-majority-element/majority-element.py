@@ -1,5 +1,9 @@
-class Solution:
-    def majorityElement(self, nums: List[int]) -> int:
+class Solution(object):
+    def majorityElement(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
         candidate = None
         count = 0
 
