@@ -1,5 +1,5 @@
-class Solution:
-    def maxProduct(self, n: int) -> int:
+class Solution(object):
+    def maxProduct(self, n):
         d = []
 
         while n:
