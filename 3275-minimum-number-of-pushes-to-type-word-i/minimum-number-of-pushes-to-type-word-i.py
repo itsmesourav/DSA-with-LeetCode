@@ -1,5 +1,5 @@
-class Solution:
-    def minimumPushes(self, word: str) -> int:
+class Solution(object):
+    def minimumPushes(self, word):
         res = 0
 
         for i in range(len(word)):
