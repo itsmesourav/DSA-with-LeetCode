@@ -1,5 +1,9 @@
-class Solution:
-    def minimumPushes(self, word: str) -> int:
+class Solution(object):
+    def minimumPushes(self, word):
+        """
+        :type word: str
+        :rtype: int
+        """
         fm = Counter(word)
         res = 0
         s = sorted(fm.values(), reverse = True)
