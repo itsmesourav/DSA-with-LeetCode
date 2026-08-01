@@ -1,5 +1,5 @@
-class Solution:
-    def isHappy(self, n: int) -> bool:
+class Solution(object):
+    def isHappy(self, n):
         seen = set()
 
         while n != 1 and n not in seen:
