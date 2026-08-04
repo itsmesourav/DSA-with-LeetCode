@@ -6,14 +6,12 @@ class Solution(object):
         """
         nums = set(nums)
 
-        mn, mx = float('inf'), float('-inf')
-        for n in nums:
-            mn = min(mn, n)
-            mx = max(mx, n)
+        mn = min(nums)
+        mx = max(nums)
 
         res = []
         for n in range(mn, mx + 1):
-            if not n in nums:
+            if n not in nums:
                 res.append(n)
 
         return res
