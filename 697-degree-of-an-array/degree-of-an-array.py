@@ -1,7 +1,7 @@
 from collections import defaultdict
 
-class Solution:
-    def findShortestSubArray(self, nums: List[int]) -> int:
+class Solution(object):
+    def findShortestSubArray(self, nums):
         count = defaultdict(int)
         first = {}
         last = {}
