@@ -1,5 +1,5 @@
-class Solution(object):
-    def containsDuplicate(self, nums):
+class Solution:
+    def containsDuplicate(self, nums: List[int]) -> bool:
         seen = set()
 
         for num in nums:
