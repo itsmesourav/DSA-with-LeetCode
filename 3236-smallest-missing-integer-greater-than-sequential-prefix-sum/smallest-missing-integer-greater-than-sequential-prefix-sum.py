@@ -1,5 +1,5 @@
-class Solution:
-    def missingInteger(self, nums: List[int]) -> int:
+class Solution(object):
+    def missingInteger(self, nums):
         n = len(nums)
         p = nums[0]
 
