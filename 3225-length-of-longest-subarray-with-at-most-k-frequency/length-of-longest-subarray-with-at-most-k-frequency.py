@@ -1,5 +1,5 @@
-class Solution:
-    def maxSubarrayLength(self, nums: List[int], k: int) -> int:
+class Solution(object):
+    def maxSubarrayLength(self, nums, k):
         n = len(nums)
         fm = defaultdict(int)
 
@@ -13,3 +13,4 @@ class Solution:
             res = max(res, r - l + 1)
         
         return res
+        
