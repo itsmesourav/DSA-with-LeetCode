@@ -1,7 +1,5 @@
-#from collections import defaultdict
-
-class Solution:
-    def maxNumberOfFamilies(self, n: int, reservedSeats: list[list[int]]) -> int:
+class Solution(object):
+    def maxNumberOfFamilies(self, n, reservedSeats):
         mp = defaultdict(list)
 
         for r, c in reservedSeats:
