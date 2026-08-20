@@ -1,5 +1,5 @@
-class Solution:
-    def resultArray(self, nums: List[int]) -> List[int]:
+class Solution(object):
+    def resultArray(self, nums):
         n = len(nums)
         arr1 = [nums[0]]
         arr2 = [nums[1]]
