@@ -1,5 +1,9 @@
-class Solution:
+class Solution(object):
     def checkDivisibility(self, n):
+        """
+        :type n: int
+        :rtype: bool
+        """
         x = n
         digit_sum = 0
         digit_product = 1
