@@ -1,5 +1,5 @@
-class Solution:
-    def missingMultiple(self, nums: List[int], k: int) -> int:
+class Solution(object):
+    def missingMultiple(self, nums, k):
         nums = set(nums)
         curr = k
         while curr in nums:
