@@ -1,5 +1,10 @@
-class Solution:
-    def shortestBeautifulSubstring(self, s: str, k: int) -> str:
+class Solution(object):
+    def shortestBeautifulSubstring(self, s, k):
+        """
+        :type s: str
+        :type k: int
+        :rtype: str
+        """
         ones = [i for i, ch in enumerate(s) if ch == '1']
 
         if len(ones) < k:
