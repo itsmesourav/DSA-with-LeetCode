@@ -1,5 +1,5 @@
-class Solution:
-    def numDistinct(self, s: str, t: str) -> int:
+class Solution(object):
+    def numDistinct(self, s, t):
         n = len(s)
         m = len(t)
 
