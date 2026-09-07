@@ -1,5 +1,5 @@
-class Solution:
-    def distinctSubseqII(self, s: str) -> int:
+class Solution(object):
+    def distinctSubseqII(self, s):
         n = len(s)
         dp = [1] * (n + 1)
         last = {}
