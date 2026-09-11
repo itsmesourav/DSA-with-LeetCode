@@ -1,5 +1,5 @@
-class Solution:
-    def totalNumbers(self, digits: List[int]) -> int:
+class Solution(object):
+    def totalNumbers(self, digits):
         nums = set()
 
         n = len(digits)
