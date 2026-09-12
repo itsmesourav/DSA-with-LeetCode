@@ -16,7 +16,7 @@ class Solution:
             skipw, skip_indices = dp(i + 1, rem)
 
             l, r, w = intervals[i]
-            nexti = bisect.bisect_left(intervals, (r + 1, 0))
+            nexti = bisect.bisect_left(intervals, (r + 1,))
             nextw, next_indices = dp(nexti, rem - 1)
             takew = w + nextw
             take_indices = next_indices + [intervalsi[intervals[i]]]
