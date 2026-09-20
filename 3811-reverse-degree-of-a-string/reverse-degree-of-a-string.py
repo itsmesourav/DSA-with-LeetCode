@@ -1,5 +1,9 @@
-class Solution:
-    def reverseDegree(self, s: str) -> int:
+class Solution(object):
+    def reverseDegree(self, s):
+        """
+        :type s: str
+        :rtype: int
+        """
         ans = 0
 
         for i in range(len(s)):
