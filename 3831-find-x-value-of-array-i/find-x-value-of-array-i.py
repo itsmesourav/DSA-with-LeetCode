@@ -7,14 +7,11 @@ class Solution:
             x = num % k
             cur = [0] * k
 
-            # Start a new subarray
             cur[x] += 1
 
-            # Extend previous subarrays
             for r in range(k):
                 cur[(r * x) % k] += prev[r]
 
-            # Add to answer
             for r in range(k):
                 ans[r] += cur[r]
 
