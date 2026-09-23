@@ -1,5 +1,5 @@
-class Solution:
-    def minOperations(self, nums: list[int], x: int) -> int:
+class Solution(object):
+    def minOperations(self, nums, x):
         target = sum(nums) - x
 
         if target < 0:
