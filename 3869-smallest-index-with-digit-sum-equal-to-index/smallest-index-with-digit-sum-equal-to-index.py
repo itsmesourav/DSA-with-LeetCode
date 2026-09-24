@@ -1,5 +1,5 @@
-class Solution:
-    def smallestIndex(self, nums: List[int]) -> int:
+class Solution(object):
+    def smallestIndex(self, nums):
         for i, num in enumerate(nums):
             s = 0
             while num:
