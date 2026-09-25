@@ -1,6 +1,9 @@
-class Solution:
-    def braceExpansionII(self, expression: str) -> list[str]:
-
+class Solution(object):
+    def braceExpansionII(self, expression):
+        """
+        :type expression: str
+        :rtype: List[str]
+        """
         def combine(a, b):
             result = set()
 
