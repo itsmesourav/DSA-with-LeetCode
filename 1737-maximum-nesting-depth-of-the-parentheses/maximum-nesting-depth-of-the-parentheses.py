@@ -1,5 +1,5 @@
-class Solution:
-    def maxDepth(self, s: str) -> int:
+class Solution(object):
+    def maxDepth(self, s):
         d = 0
         res = 0
 
@@ -9,4 +9,5 @@ class Solution:
             elif c ==')':
                 d += 1
             res = max(res, abs(d))
+            
         return res
