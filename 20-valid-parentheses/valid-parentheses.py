@@ -1,13 +1,17 @@
-class Solution(object):
-    def isValid(self, s):
+class Solution:
+    def isValid(self, s: str) -> bool:
         stack = []
-        pairs = {")": "(", "}": "{", "]": "["}
         for char in s:
-            if char in pairs:
-                if not stack or stack[-1] != pairs[char]:
-                    return False
-                stack.pop()
-            else:
+            if char == "(" or char == "{" or char == "[":
                 stack.append(char)
-        return not stack
-        
+            else:
+                if not stack:
+                    return False
+                top = stack.pop()
+                if char == ")" and top != "(":
+                    return False
+                if char == "}" and top != "{":
+                    return False
+                if char == "]" and top != '[':
+                    return False
+        return len(stack) == 0
