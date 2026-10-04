@@ -1,5 +1,5 @@
-class Solution:
-    def checkValidString(self, s: str) -> bool:
+class Solution(object):
+    def checkValidString(self, s):
         n = len(s)
         
         d = 0
