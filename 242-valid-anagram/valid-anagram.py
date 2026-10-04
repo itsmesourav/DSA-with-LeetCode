@@ -1,3 +1,3 @@
-class Solution:
-    def isAnagram(self, s: str, t: str) -> bool:
+class Solution(object):
+    def isAnagram(self, s, t):
         return sorted(s) == sorted(t)
