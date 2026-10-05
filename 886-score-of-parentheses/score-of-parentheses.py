@@ -1,5 +1,5 @@
-class Solution:
-    def scoreOfParentheses(self, s: str) -> int:
+class Solution(object):
+    def scoreOfParentheses(self, s):
         d = 0
         prev = ''
         res = 0
