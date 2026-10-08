@@ -1,5 +1,9 @@
-class Solution:
-    def removeOuterParentheses(self, s: str) -> str:
+class Solution(object):
+    def removeOuterParentheses(self, s):
+        """
+        :type s: str
+        :rtype: str
+        """
         result = []
         balance = 0
 
