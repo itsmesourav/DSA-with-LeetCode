@@ -4,8 +4,6 @@ from typing import List
 class Solution:
     def maxSum(self, nums: List[int], k: int) -> int:
         MOD = 10**9 + 7
-
-        # Count how many numbers contain each bit
         bit_count = [0] * 32
 
         for num in nums:
@@ -14,8 +12,6 @@ class Solution:
                     bit_count[bit] += 1
 
         ans = 0
-
-        # Construct k numbers with the largest possible values
         for _ in range(k):
             num = 0
 
