@@ -1,9 +1,8 @@
 
-from typing import List
-
-class Solution:
-    def maxSum(self, nums: List[int], k: int) -> int:
+class Solution(object):
+    def maxSum(self, nums, k):
         MOD = 10**9 + 7
+
         bit_count = [0] * 32
 
         for num in nums:
@@ -12,6 +11,7 @@ class Solution:
                     bit_count[bit] += 1
 
         ans = 0
+
         for _ in range(k):
             num = 0
 
