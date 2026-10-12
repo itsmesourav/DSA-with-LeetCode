@@ -1,4 +1,3 @@
-
 class Solution(object):
     def maxSum(self, nums, k):
         MOD = 10**9 + 7
