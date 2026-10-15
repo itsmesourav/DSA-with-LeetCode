@@ -1,14 +1,16 @@
-class Solution(object):
-    def sumCounts(self, nums):
+from typing import List
+
+class Solution:
+    def sumCounts(self, nums: List[int]) -> int:
         total = 0
         n = len(nums)
 
-        for i in range(n):
+        for start in range(n):
             seen = set()
 
-            for j in range(i, n):
-                seen.add(nums[j])
-                count = len(seen)
-                total += count * count
+            for end in range(start, n):
+                seen.add(nums[end])
+                distinct = len(seen)
+                total += distinct * distinct
 
         return total
