@@ -1,32 +1,34 @@
-class Solution(object):
-    def minSwaps(self, nums):
-        def digit_sum(num):
+from typing import List
+
+class Solution:
+    def minSwaps(self, nums: List[int]) -> int:
+        def digit_sum(x):
             total = 0
-            while num:
-                total += num % 10
-                num //= 10
+            while x:
+                total += x % 10
+                x //= 10
             return total
 
         n = len(nums)
-        sorted_nums = sorted(nums, key=lambda x: (digit_sum(x), x))
+        ordered = sorted(nums, key=lambda x: (digit_sum(x), x))
 
-        index_map = {num: i for i, num in enumerate(nums)}
+        position = {value: i for i, value in enumerate(nums)}
         visited = [False] * n
         swaps = 0
 
         for i in range(n):
-            if visited[i] or index_map[sorted_nums[i]] == i:
+            if visited[i] or position[ordered[i]] == i:
                 visited[i] = True
                 continue
 
-            cycle = 0
-            j = i
+            cycle_size = 0
+            current = i
 
-            while not visited[j]:
-                visited[j] = True
-                j = index_map[sorted_nums[j]]
-                cycle += 1
+            while not visited[current]:
+                visited[current] = True
+                current = position[ordered[current]]
+                cycle_size += 1
 
-            swaps += cycle - 1
+            swaps += cycle_size - 1
 
         return swaps
