@@ -1,5 +1,9 @@
-class Solution:
-    def numOfWays(self, nums: list[int]) -> int:
+class Solution(object):
+    def numOfWays(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
         MOD = 10**9 + 7
         n = len(nums)
 
