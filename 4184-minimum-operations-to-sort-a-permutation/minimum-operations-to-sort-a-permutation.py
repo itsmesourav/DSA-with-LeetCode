@@ -1,18 +1,22 @@
-from typing import List
-
-class Solution:
-    def minOperations(self, nums: List[int]) -> int:
+class Solution(object):
+    def minOperations(self, nums):
         n = len(nums)
 
-        # Check all left rotations without reversing
-        for k in range(n):
-            if all(nums[(i + k) % n] == i for i in range(n)):
-                return min(k, n - k + 2) if k != 0 else 0
+        # Check if nums is a rotation of the sorted array
+        for i in range(n):
+            if nums[i] != (nums[0] + i) % n:
+                break
+        else:
+            k = nums.index(0)
+            return min(k, n - k + 2) if k != 0 else 0
 
-        # Check all left rotations after reversing
+        # Check if reversing nums gives a rotation of the sorted array
         rev = nums[::-1]
-        for k in range(n):
-            if all(rev[(i + k) % n] == i for i in range(n)):
-                return min(k + 1, n - k + 1)
+        for i in range(n):
+            if rev[i] != (rev[0] + i) % n:
+                break
+        else:
+            k = rev.index(0)
+            return min(k + 1, n - k + 1)
 
         return -1
