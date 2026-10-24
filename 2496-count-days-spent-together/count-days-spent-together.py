@@ -1,13 +1,11 @@
-
-class Solution:
-    def countDaysTogether(self, arriveAlice: str, leaveAlice: str, arriveBob: str, leaveBob: str) -> int:
-        month_days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
-
-        def to_day(date):
+class Solution(object):
+    def countDaysTogether(self, arriveAlice, leaveAlice, arriveBob, leaveBob):
+        def convert(date):
             month, day = map(int, date.split('-'))
-            return sum(month_days[:month - 1]) + day
+            days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+            return sum(days[:month - 1]) + day
 
-        start = max(to_day(arriveAlice), to_day(arriveBob))
-        end = min(to_day(leaveAlice), to_day(leaveBob))
+        start = max(convert(arriveAlice), convert(arriveBob))
+        end = min(convert(leaveAlice), convert(leaveBob))
 
         return max(0, end - start + 1)
