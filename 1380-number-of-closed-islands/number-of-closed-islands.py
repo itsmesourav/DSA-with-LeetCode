@@ -1,5 +1,5 @@
-class Solution:
-    def closedIsland(self, grid: list[list[int]]) -> int:
+class Solution(object):
+    def closedIsland(self, grid):
         rows, cols = len(grid), len(grid[0])
 
         def dfs(r, c):
