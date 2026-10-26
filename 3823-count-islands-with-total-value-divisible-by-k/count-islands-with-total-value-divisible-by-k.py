@@ -1,34 +1,32 @@
 
-from typing import List
-
-class Solution:
-    def countIslands(self, grid: List[List[int]], k: int) -> int:
+class Solution(object):
+    def countIslands(self, grid, k):
         m, n = len(grid), len(grid[0])
-        islands = 0
+        seen = [[False] * n for _ in range(m)]
+        answer = 0
 
-        for r in range(m):
-            for c in range(n):
-                if grid[r][c] > 0:
-                    stack = [(r, c)]
-                    total = 0
+        for i in range(m):
+            for j in range(n):
+                if grid[i][j] == 0 or seen[i][j]:
+                    continue
 
-                    # Mark the starting cell as visited
-                    total += grid[r][c]
-                    grid[r][c] = 0
+                stack = [(i, j)]
+                seen[i][j] = True
+                remainder = 0
 
-                    while stack:
-                        x, y = stack.pop()
+                while stack:
+                    x, y = stack.pop()
+                    remainder = (remainder + grid[x][y]) % k
 
-                        for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1)):
-                            nx, ny = x + dx, y + dy
+                    for nx, ny in ((x - 1, y), (x + 1, y),
+                                   (x, y - 1), (x, y + 1)):
+                        if (0 <= nx < m and 0 <= ny < n
+                                and grid[nx][ny] > 0
+                                and not seen[nx][ny]):
+                            seen[nx][ny] = True
+                            stack.append((nx, ny))
 
-                            if (0 <= nx < m and 0 <= ny < n
-                                    and grid[nx][ny] > 0):
-                                total += grid[nx][ny]
-                                stack.append((nx, ny))
-                                grid[nx][ny] = 0
+                if remainder == 0:
+                    answer += 1
 
-                    if total % k == 0:
-                        islands += 1
-
-        return islands
+        return answer
