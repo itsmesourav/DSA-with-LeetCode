@@ -1,5 +1,5 @@
-class Solution:
-    def createGrid(self, m: int, n: int) -> list[str]:
+class Solution(object):
+    def createGrid(self, m, n):
         grid = [['#'] * n for _ in range(m)]
 
         for i in range(m):
