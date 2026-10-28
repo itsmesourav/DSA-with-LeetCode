@@ -1,5 +1,5 @@
-class Solution:
-    def minCost(self, grid: list[list[int]]) -> int:
+class Solution(object):
+    def minCost(self, grid):
         m, n = len(grid), len(grid[0])
         dp = [[set() for _ in range(n)] for _ in range(m)]
         dp[0][0].add(grid[0][0])
