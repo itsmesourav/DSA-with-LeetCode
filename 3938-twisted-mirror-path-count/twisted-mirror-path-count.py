@@ -1,4 +1,3 @@
-
 class Solution:
     def uniquePaths(self, grid: List[List[int]]) -> int:
         MOD = 10**9 + 7
