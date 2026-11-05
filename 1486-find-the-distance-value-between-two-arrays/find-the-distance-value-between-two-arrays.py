@@ -1,5 +1,5 @@
-class Solution:
-    def findTheDistanceValue(self, arr1: list[int], arr2: list[int], d: int) -> int:
+class Solution(object):
+    def findTheDistanceValue(self, arr1, arr2, d):
         n, m = len(arr1), len(arr2)
         res = 0
 
