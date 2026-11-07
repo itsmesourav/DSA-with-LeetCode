@@ -1,7 +1,7 @@
 import heapq
 
-class Solution:
-    def assignTasks(self, servers: list[int], tasks: list[int]) -> list[int]:
+class Solution(object):
+    def assignTasks(self, servers, tasks):
         free = [(w, i) for i, w in enumerate(servers)]
         heapq.heapify(free)
 
