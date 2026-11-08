@@ -1,5 +1,5 @@
-class Solution:
-    def countServers(self, grid: list[list[int]]) -> int:
+class Solution(object):
+    def countServers(self, grid):
         m, n = len(grid), len(grid[0])
         
         r = [0] * m
