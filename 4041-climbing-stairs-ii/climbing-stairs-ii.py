@@ -1,5 +1,5 @@
-class Solution:
-    def climbStairs(self, n: int, costs: List[int]) -> int:
+class Solution(object):
+    def climbStairs(self, n, costs):
         dp = [float('inf')] * (n + 1)
         dp[0] = 0
 
