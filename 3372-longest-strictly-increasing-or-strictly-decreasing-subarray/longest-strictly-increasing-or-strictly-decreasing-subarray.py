@@ -1,5 +1,5 @@
-class Solution:
-    def longestMonotonicSubarray(self, nums: List[int]) -> int:
+class Solution(object):
+    def longestMonotonicSubarray(self, nums):
         n = len(nums)
         res = 0
 
