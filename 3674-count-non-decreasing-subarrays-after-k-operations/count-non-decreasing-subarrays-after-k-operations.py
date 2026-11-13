@@ -1,9 +1,14 @@
 from collections import deque
 
 
-class Solution:
+class Solution(object):
 
-  def countNonDecreasingSubarrays(self, nums: list[int], k: int) -> int:
+  def countNonDecreasingSubarrays(self, nums, k):
+    """
+    :type nums: List[int]
+    :type k: int
+    :rtype: int
+    """
     ans = 0
     cost = 0
     dq = deque()
