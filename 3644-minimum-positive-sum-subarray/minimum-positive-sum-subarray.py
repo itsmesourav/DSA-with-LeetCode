@@ -1,19 +1,19 @@
-class Solution:
-    def minimumSumSubarray(self, nums: List[int], l: int, r: int) -> int:
+class Solution(object):
+    def minimumSumSubarray(self, nums, l, r):
         n = len(nums)
-        res = inf
+        res = float('inf')
 
         for i in range(n):
             curr = 0
-            count = 0
+
             for j in range(i, n):
-                count += 1
                 curr += nums[j]
-                if count < l:
-                    continue
-                if count > r:
+                length = j - i + 1
+
+                if length > r:
                     break
-                if curr > 0:
+
+                if length >= l and curr > 0:
                     res = min(res, curr)
 
-        return res if res != inf else -1
+        return res if res != float('inf') else -1
