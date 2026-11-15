@@ -1,6 +1,6 @@
 class Solution {
     public int numOfSubarrays(int[] arr) {
-        int mod = 1000000007;
+        int MOD = 1000000007;
 
         long odd = 0;
         long even = 1;
@@ -19,7 +19,7 @@ class Solution {
                 odd ++;
             }
 
-            ans %= mod;
+            ans %= MOD;
         }
 
         return (int)ans;
