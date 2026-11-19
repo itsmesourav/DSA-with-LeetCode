@@ -1,5 +1,5 @@
-class Solution:
-    def minimizeSum(self, nums: List[int]) -> int:
+class Solution(object):
+    def minimizeSum(self, nums):
         nums.sort()
         n = len(nums)
 
