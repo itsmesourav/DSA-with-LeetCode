@@ -6,10 +6,8 @@ class Solution:
         dp = {}
 
         for x in nums:
-            # Increase current element by 1
             dp[x + 1] = max(dp.get(x + 1, 0), dp.get(x, 0) + 1)
 
-            # Keep current element unchanged
             dp[x] = max(dp.get(x, 0), dp.get(x - 1, 0) + 1)
 
         return max(dp.values())
