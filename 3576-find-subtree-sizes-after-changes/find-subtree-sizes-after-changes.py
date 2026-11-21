@@ -1,17 +1,15 @@
-from typing import List
 
-class Solution:
-    def findSubtreeSizes(self, parent: List[int], s: str) -> List[int]:
-
+class Solution(object):
+    def findSubtreeSizes(self, parent, s):
         n = len(parent)
 
-        # Build original tree
+        # Step 1: Build the original tree
         children = [[] for _ in range(n)]
 
         for i in range(1, n):
             children[parent[i]].append(i)
 
-        # Find new parents using DFS
+        # Step 2: Find new parents using DFS
         new_parent = parent[:]
         last = [-1] * 26
 
@@ -37,13 +35,13 @@ class Solution:
             else:
                 last[ch] = old
 
-        # Build final tree
+        # Step 3: Build the modified tree
         new_children = [[] for _ in range(n)]
 
         for i in range(1, n):
             new_children[new_parent[i]].append(i)
 
-        # Calculate subtree sizes
+        # Step 4: Calculate subtree sizes
         ans = [1] * n
         order = [0]
 
