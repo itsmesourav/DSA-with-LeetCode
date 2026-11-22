@@ -1,3 +1,3 @@
-class Solution:
-    def checkString(self, s: str) -> bool:
+class Solution(object):
+    def checkString(self, s):
         return "ba" not in s
