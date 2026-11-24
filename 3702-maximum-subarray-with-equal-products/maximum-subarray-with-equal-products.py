@@ -1,11 +1,8 @@
+from typing import List
+from math import gcd
 
-class Solution(object):
-    def maxLength(self, nums):
-        def gcd(a, b):
-            while b:
-                a, b = b, a % b
-            return a
-
+class Solution:
+    def maxLength(self, nums: List[int]) -> int:
         n = len(nums)
         ans = 0
 
