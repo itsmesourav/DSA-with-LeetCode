@@ -1,5 +1,5 @@
-class Solution:
-    def canAliceWin(self, n: int) -> bool:
+class Solution(object):
+    def canAliceWin(self, n):
         stones = 10
         alice_turn = True
 
